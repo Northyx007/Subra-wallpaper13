@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#08080c">
+<title>MAPENZI WALLPAPER</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#home">
+    <span class="brand-icon">♥</span>
+    <span>
+      <b>MAPENZI</b>
+      <small>WALLPAPER</small>
+    </span>
+  </a>
+
+  <nav class="desktop-nav">
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#popular">Popular</a>
+    <a href="#latest">Latest</a>
+    <a href="#favorites">Favorites</a>
+  </nav>
+
+  <div class="top-actions">
+    <button id="themeBtn" class="circle">☼</button>
+    <button id="searchBtn" class="circle">⌕</button>
+    <button id="loginBtn" class="login">Log in</button>
+  </div>
+</header>
+
+<section id="searchBox" class="search-panel">
+  <div>
+    <span>⌕</span>
+    <input id="searchInput" placeholder="Search wallpapers, categories or tags...">
+    <button id="closeSearch">×</button>
+  </div>
+</section>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+    <span class="eyebrow">✦ PREMIUM WALLPAPERS</span>
+
+    <h1>
+      Your Screen.<br>
+      <em>Your Style.</em>
+    </h1>
+
+    <p>
+      Beautiful wallpapers for Love, Islamic, Nature, Cars, Anime,
+      Football, Technology and more.
+    </p>
+
+    <div class="hero-actions">
+      <button class="primary" id="exploreBtn">
+        Explore Wallpapers →
+      </button>
+
+      <button class="glass" id="createBtn">
+        Create Account
+      </button>
+    </div>
+
+    <div class="stats">
+      <div>
+        <b id="count">0</b>
+        <span>Wallpapers</span>
+      </div>
+
+      <div>
+        <b>14</b>
+        <span>Categories</span>
+      </div>
+
+      <div>
+        <b>HD</b>
+        <span>Quality</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="floating">
+    🔥
+    <span>
+      <b>Trending</b>
+      <small>Fresh wallpapers</small>
+    </span>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="head">
+    <div>
+      <span class="eyebrow">EXPLORE</span>
+      <h2>Categories</h2>
+    </div>
+  </div>
+
+  <div id="categoriesGrid" class="categories"></div>
+</section>
+
+<section class="section" id="popular">
+  <div class="head">
+    <div>
+      <span class="eyebrow">TRENDING NOW</span>
+      <h2>Popular Wallpapers</h2>
+    </div>
+  </div>
+
+  <div id="popularGrid" class="gallery"></div>
+</section>
+
+<section class="section" id="latest">
+  <div class="head">
+    <div>
+      <span class="eyebrow">JUST ADDED</span>
+      <h2>Latest Wallpapers</h2>
+    </div>
+  </div>
+
+  <div id="latestGrid" class="gallery"></div>
+</section>
+
+<section class="section" id="favorites">
+  <div class="head">
+    <div>
+      <span class="eyebrow">YOUR COLLECTION</span>
+      <h2>Favorites <i>♥</i></h2>
+    </div>
+  </div>
+
+  <div id="favoritesGrid" class="gallery"></div>
+</section>
+
+<section class="section results" id="results">
+  <div class="head">
+    <div>
+      <span class="eyebrow">SEARCH</span>
+      <h2 id="resultsTitle">Search Results</h2>
+    </div>
+  </div>
+
+  <div id="resultsGrid" class="gallery"></div>
+</section>
+
+</main>
+
+<footer>
+  <b>♥ MAPENZI WALLPAPER</b>
+  <p>Beautiful screens. Beautiful moments.</p>
+  <small>© <span id="year"></span> Mapenzi Wallpaper</small>
+</footer>
+
+<nav class="bottom-nav">
+  <a href="#home">⌂<small>Home</small></a>
+  <a href="#categories">◈<small>Categories</small></a>
+  <a href="#popular">🔥<small>Popular</small></a>
+  <a href="#favorites">♥<small>Favorites</small></a>
+</nav>
+
+<button id="topBtn" class="top-btn">↑</button>
+
+<!-- PREVIEW -->
+
+<div id="preview" class="modal">
+
+  <div class="backdrop" data-close></div>
+
+  <div class="preview">
+
+    <button class="close" data-close>×</button>
+
+    <div class="preview-image">
+      <img id="mImg">
+    </div>
+
+    <div class="preview-body">
+
+      <div class="preview-top">
+
+        <div>
+          <span id="mCat" class="pill"></span>
+          <h2 id="mTitle"></h2>
+        </div>
+
+        <div class="actions">
+          <button id="mFav">♡</button>
+          <button id="mShare">↗</button>
+          <button id="mDownload" class="download">
+            ↓ Download
+          </button>
+        </div>
+
+      </div>
+
+      <div class="details">
+
+        <div>
+          <small>Resolution</small>
+          <b id="mRes"></b>
+        </div>
+
+        <div>
+          <small>File size</small>
+          <b id="mSize"></b>
+        </div>
+
+        <div>
+          <small>Views</small>
+          <b id="mViews"></b>
+        </div>
+
+      </div>
+
+      <h3>Related wallpapers</h3>
+
+      <div id="related" class="related"></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- LOGIN -->
+
+<div id="auth" class="modal">
+
+  <div class="backdrop" data-auth-close></div>
+
+  <div class="auth">
+
+    <button class="close" data-auth-close>×</button>
+
+    <div class="auth-icon">♥</div>
+
+    <h2 id="authTitle">Welcome back</h2>
+
+    <p id="authSub">
+      Log in to save your favorite wallpapers.
+    </p>
+
+    <div class="tabs">
+      <button id="loginTab" class="active">Log in</button>
+      <button id="registerTab">Create account</button>
+    </div>
+
+    <form id="loginForm">
+
+      <label>
+        Email
+        <input
+          id="loginEmail"
+          type="email"
+          required
+          placeholder="you@example.com"
+        >
+      </label>
+
+      <label>
+        Password
+        <input
+          id="loginPass"
+          type="password"
+          required
+          placeholder="••••••••"
+        >
+      </label>
+
+      <button class="primary full">
+        Log in
+      </button>
+
+    </form>
+
+    <form id="registerForm" hidden>
+
+      <label>
+        Name
+        <input
+          id="regName"
+          required
+          placeholder="Your name"
+        >
+      </label>
+
+      <label>
+        Email
+        <input
+          id="regEmail"
+          type="email"
+          required
+          placeholder="you@example.com"
+        >
+      </label>
+
+      <label>
+        Password
+        <input
+          id="regPass"
+          type="password"
+          minlength="6"
+          required
+          placeholder="At least 6 characters"
+        >
+      </label>
+
+      <button class="primary full">
+        Create account
+      </button>
+
+    </form>
+
+    <button id="guest" class="guest">
+      Continue as guest
+    </button>
+
+    <small class="demo-note">
+      Hii ni login ya demo ya frontend.
+      Kwa account halisi online tutahitaji Firebase/Supabase/backend.
+    </small>
+
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+  </html>
